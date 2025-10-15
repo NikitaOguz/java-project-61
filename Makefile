@@ -1,36 +1,35 @@
 .DEFAULT_GOAL := build-run
 
 setup:
-	./gradlew wrapper --gradle-version 9.1.0
+	gradlew.bat wrapper --gradle-version 9.1.0
 
 clean:
-	./gradlew clean
+	gradlew.bat clean
 
 build:
-	./gradlew clean build
+	gradlew.bat clean build
 
 install:
-	./gradlew clean install
+	gradlew.bat clean install
 
 run-dist:
-	./build/install/java-package/bin/java-package
+	build\install\app\bin\app
 
 run:
-	./gradlew run
+	gradlew.bat run
 
 test:
-	./gradlew test
+	gradlew.bat test
 
 report:
-	./gradlew jacocoTestReport
+	gradlew.bat jacocoTestReport
 
 lint:
-	./gradlew spotlessApply
+	gradlew.bat spotlessApply
 
 update-deps:
-	./gradlew refreshVersions
-	# ./gradlew dependencyUpdates -Drevision=release
-
+	gradlew.bat refreshVersions
+	# gradlew.bat dependencyUpdates -Drevision=release
 
 build-run: build run
 
