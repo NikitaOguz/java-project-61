@@ -18,6 +18,8 @@ public class Generation {
                 System.out.println("Let's try again, " + Cli.name + "!");
                 return; // завершение игры при ошибке
             }
+
         }
+        System.out.println("Congratulations, " + Cli.name + "!");
     }
 }
