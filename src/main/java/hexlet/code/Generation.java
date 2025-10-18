@@ -1,17 +1,15 @@
 package hexlet.code;
-import java.util.Random;
 public class Generation {
     public static void generation(String[] args)
     {
-
-        Random random = new Random();
+        Rand r = new Rand();                   // создаём объект
+        int number = r.random.nextInt(100);
         for (int i = 0; i < 3; i++) {  // повторение 3 раза
-        int rand = random.nextInt(100);
-        System.out.println("Question: " + rand);
+        System.out.println("Question: " + number);
         String answer = Input.scanner.next();
         System.out.println("Your answer: " + answer);
 
-        if (rand % 2 == 0 && answer.equals("yes")) {
+        if (number % 2 == 0 && answer.equals("yes")) {
             System.out.println("Correct!");
         } else {
             System.out.println("'yes' is wrong answer ;(. Correct answer was 'no'.\n" +
