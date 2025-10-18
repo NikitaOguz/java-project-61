@@ -1,7 +1,10 @@
 package hexlet.code;
+import java.util.logging.Logger;
 public class App {
-    public static void main( String[] args) {
-        System.out.println("Please enter the game number and press Enter:" + "\n" + "1 - Greet\n" +
+    private static final Logger logger = Logger.getLogger(App.class.getName());
+
+    public static void main(String[] args) {
+        logger.info("Please enter the game number and press Enter:" + "\n" + "1 - Greet\n" +
                 "2 - Even\n" +
                 "0 - Exit");
         int number = Input.scanner.nextInt();

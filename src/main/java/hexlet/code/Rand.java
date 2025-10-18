@@ -1,7 +1,7 @@
 package hexlet.code;
-import java.util.Random;
+import java.security.SecureRandom;
 public class Rand {
-    public Random random = new Random();
+    public SecureRandom random = new SecureRandom();
     public void use() {
         int rand = this.random.nextInt();
     }
