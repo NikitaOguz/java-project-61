@@ -38,5 +38,3 @@ make lint
 ```bash
 make update
 ```
-
-## asdf
