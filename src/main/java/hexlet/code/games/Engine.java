@@ -1,5 +1,5 @@
-package hexlet.code;
-
+package hexlet.code.games;
+import hexlet.code.*;
 public class Engine {
     public static void generation(String[] args) {
         for (int i = 0; i < 3; i++) {  // цикл с 3 повторениями
