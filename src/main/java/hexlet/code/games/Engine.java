@@ -1,5 +1,8 @@
 package hexlet.code.games;
 import hexlet.code.*;
+
+import java.math.BigInteger;
+
 public class Engine {
     public static void generation(String[] args) {
         for (int i = 0; i < 3; i++) {  // цикл с 3 повторениями
@@ -57,5 +60,27 @@ public class Engine {
             System.out.println("Correct!");
         }
         System.out.println("Congratulations, " + Cli.name + "!");
+    }
+    public static void nod(String[] args)
+    {
+        System.out.println("Find the greatest common divisor of given numbers.");
+        for(int i = 0; i < 3; i++)
+        {
+            int nod1 = Rand.random.nextInt(100);
+            int nod2 = Rand.random.nextInt(100);
+            System.out.println("Question: " + nod1 + " " + nod2);
+            BigInteger n1 = BigInteger.valueOf(nod1);
+            BigInteger n2 = BigInteger.valueOf(nod2);
+            BigInteger resultnod = n1.gcd(n2);
+            int gcdAnswer = Input.scanner.nextInt();
+            System.out.println("Your answer: " + gcdAnswer);
+            if (BigInteger.valueOf(gcdAnswer).equals(resultnod)) {
+                System.out.println("Correct!");
+            } else {
+                System.out.println("'" + gcdAnswer + "' is wrong answer ;(. Correct answer was '" + resultnod + "'.");
+                System.out.println("Let's try again, " + Cli.name + "!");
+                return;
+            }
+        }
     }
     }

@@ -1,4 +1,7 @@
 package hexlet.code;
+
+import hexlet.code.games.Engine;
+
 public class App {
     public static void main(String[] args) {
         System.out.println("""
@@ -23,9 +26,10 @@ public class App {
                 Cli.selectname(args);
                 hexlet.code.games.Engine.expression(args);
                 break;
-          //  case 4:
-              //  Cli.selectname(args);
-//break;
+                case 4:
+                    Cli.selectname(args);
+                    Engine.nod(args);
+                    break;
             case 0:
                 return;
             default:
