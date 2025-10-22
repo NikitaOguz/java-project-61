@@ -4,7 +4,8 @@ import hexlet.code.*;
 import java.math.BigInteger;
 
 public class Engine {
-    public static void generation(String[] args) {
+
+    public static void generation() {
         for (int i = 0; i < 3; i++) {  // цикл с 3 повторениями
             int number = Rand.random.nextInt(100);
             System.out.println("Question: " + number);
@@ -25,10 +26,10 @@ public class Engine {
         }
         System.out.println("Congratulations, " + Cli.name + "!");
     }
-    public static void expression(String[] args)
-    {
+
+    public static void expression() {
         System.out.println("What is the result of the expression?");
-        for(int i = 0; i < 3; i++) {
+        for (int i = 0; i < 3; i++) {
             int first = Rand.random.nextInt(100);
             int second = Rand.random.nextInt(100);
             int num = Rand.random.nextInt(3);
@@ -61,11 +62,10 @@ public class Engine {
         }
         System.out.println("Congratulations, " + Cli.name + "!");
     }
-    public static void nod(String[] args)
-    {
+
+    public static void nod() {
         System.out.println("Find the greatest common divisor of given numbers.");
-        for(int i = 0; i < 3; i++)
-        {
+        for (int i = 0; i < 3; i++) {
             int nod1 = Rand.random.nextInt(100);
             int nod2 = Rand.random.nextInt(100);
             System.out.println("Question: " + nod1 + " " + nod2);
@@ -81,6 +81,44 @@ public class Engine {
                 System.out.println("Let's try again, " + Cli.name + "!");
                 return;
             }
+            System.out.println("Congratulations, " + Cli.name + "!");
         }
     }
+
+    public static void formule() {
+        int start = Rand.random.nextInt(11);
+        int step = Rand.random.nextInt(5) + 1;
+        int length = 10;
+        int randindex = Rand.random.nextInt(length);
+        StringBuilder question = new StringBuilder();
+
+        for (int i = 0; i < length; i++) {
+            int currentElement = start + i * step;
+            if (i == randindex) {
+                question.append(".. ");
+            } else {
+                question.append(currentElement).append(" ");
+            }
+        }
+
+        System.out.println("Question: " + question.toString().trim());
+        System.out.print("Your answer: ");
+        int answer = Input.scanner.nextInt();
+
+        if (answer == start + randindex * step) {
+            System.out.println("Correct!");
+        } else {
+            System.out.println(answer + " is wrong answer ;(. Correct answer was " + (start + randindex * step));
+            System.out.println("Let's try again, " + Cli.name + "!" );
+            System.exit(0);
+        }
+        System.out.println("Congratulations, " + Cli.name + "!");
     }
+
+    public static void progression() {
+        System.out.println("What number is missing in the progression?");
+        for (int i = 0; i < 3; i++) {
+            formule();
+        }
+    }
+}

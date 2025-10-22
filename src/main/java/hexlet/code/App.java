@@ -10,26 +10,31 @@ public class App {
         2 - Even
         3 - Calc
         4 - GCD
+        5 - Progression
         0 - Exit""");
         int number = Input.scanner.nextInt();
         switch (number)
         {
             case 1 :
-                Cli.selectname(args);
+                Cli.selectname();
                 break;
             case 2:
-                Cli.selectname(args);
+                Cli.selectname();
                 System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
-                hexlet.code.games.Engine.generation(args);
+                hexlet.code.games.Engine.generation();
                 break;
             case 3:
-                Cli.selectname(args);
-                hexlet.code.games.Engine.expression(args);
+                Cli.selectname();
+                hexlet.code.games.Engine.expression();
                 break;
                 case 4:
-                    Cli.selectname(args);
-                    Engine.nod(args);
+                    Cli.selectname();
+                    Engine.nod();
                     break;
+            case 5:
+                Cli.selectname();
+                Engine.progression();
+                break;
             case 0:
                 return;
             default:
