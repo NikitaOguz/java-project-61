@@ -45,6 +45,7 @@ public class App {
                 System.out.println("Your choice: 6");
                 Cli.selectname();
                 Engine.prime();
+                break;
             case 0:
                 return;
             default:
