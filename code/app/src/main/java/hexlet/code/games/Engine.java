@@ -109,7 +109,7 @@ public class Engine {
             System.out.println("Correct!");
         } else {
             System.out.println(answer + " is wrong answer ;(. Correct answer was " + (start + randindex * step));
-            System.out.println("Let's try again, " + Cli.name + "!" );
+            System.out.println("Let's try again, " + Cli.name + "!");
             System.exit(0);
         }
         System.out.println("Congratulations, " + Cli.name + "!");
@@ -121,34 +121,33 @@ public class Engine {
             formule();
         }
     }
-    public static void prime()
-    {
+
+    public static void prime() {
         System.out.println("Answer 'yes' if given number is prime. Otherwise answer 'no'.");
-        for(int i = 0; i < 3; i++) {
+        for (int i = 0; i < 3; i++) {
             int primenum = Rand.random.nextInt(100);
             System.out.println("Question: " + primenum);
             String useranswer = Input.scanner.next();
             System.out.println("Your answer: " + useranswer);
-            boolean isPrime = true;
-            if (primenum < 2) {
-                isPrime = false;
-            } else {
-                for (int j = 2; j <= primenum / 2; j++) {
-                    if (primenum % j == 0) {
-                        isPrime = false;
-                        break;
-                    }
-                }
-            }
+
+            boolean isPrime = isPrime(primenum);
             String correctAnswer = isPrime ? "yes" : "no";
+
             if (useranswer.equals(correctAnswer)) {
                 System.out.println("Correct!");
             } else {
                 System.out.println("'" + useranswer + "' is wrong answer ;(. Correct answer was '" + correctAnswer + "'.");
                 System.out.println("Let's try again, " + Cli.name + "!");
-                return; // завершить игру при первой ошибке
+                return;
             }
         }
         System.out.println("Congratulations, " + Cli.name + "!");
+    }
+    private static boolean isPrime(int n) {
+        if (n < 2) return false;
+        for (int i = 2; i <= Math.sqrt(n); i++) {
+            if (n % i == 0) return false;
+        }
+        return true;
     }
 }
