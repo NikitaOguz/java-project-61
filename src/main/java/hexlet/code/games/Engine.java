@@ -124,28 +124,29 @@ public class Engine {
     public static void prime()
     {
         System.out.println("Answer 'yes' if given number is prime. Otherwise answer 'no'.");
-        for(int i = 0; i < 3; i++)
-        {
+        for(int i = 0; i < 3; i++) {
             int primenum = Rand.random.nextInt(100);
             System.out.println("Question: " + primenum);
             String useranswer = Input.scanner.next();
             System.out.println("Your answer: " + useranswer);
-            boolean isEven = primenum % 2 != 0;
-            String correctAnswer = isEven ? "yes" : "no";
-
-            if(primenum > 1)
-            {
-                if ((isEven && useranswer.equals("yes")) || (!isEven && useranswer.equals("no"))) {
-                    System.out.println("Correct!");
-                }
-                else
-                {
-                    System.out.println(useranswer + " is wrong answer ;(. Correct answer was " + primenum);
-                    System.out.println("Let's try again, " + Cli.name + "!" );
-                    System.exit(0);
+            boolean isPrime = true;
+            if (primenum < 2) {
+                isPrime = false;
+                for (int j = 2; j < primenum / 2; i++) {
+                    if (primenum % j == 0) {
+                        isPrime = false;
+                    }
                 }
             }
+            String correctAnswer = isPrime ? "yes" : "no";
+            if (useranswer.equals(correctAnswer)) {
+                System.out.println("Correct!");
+            } else {
+                System.out.println("'" + useranswer + "' is wrong answer ;(. Correct answer was '" + correctAnswer + "'.");
+                System.out.println("Let's try again, " + Cli.name + "!");
+                return; // завершить игру при первой ошибке
             }
+        }
         System.out.println("Congratulations, " + Cli.name + "!");
     }
 }
