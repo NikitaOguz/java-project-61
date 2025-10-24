@@ -7,8 +7,5 @@ public class Cli {
         System.out.println("May I have your name?");
         name = Input.scanner.next();
         System.out.println("Hello, " + name + "!");
-        if (name.matches(".*\\d.*")) {
-            System.out.println("Lol are you really using symbols in your name? Okay, let's continue");
-        }
     }
 }
