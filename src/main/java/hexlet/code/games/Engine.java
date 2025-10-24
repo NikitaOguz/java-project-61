@@ -132,9 +132,11 @@ public class Engine {
             boolean isPrime = true;
             if (primenum < 2) {
                 isPrime = false;
-                for (int j = 2; j < primenum / 2; i++) {
+            } else {
+                for (int j = 2; j <= primenum / 2; j++) {
                     if (primenum % j == 0) {
                         isPrime = false;
+                        break;
                     }
                 }
             }
