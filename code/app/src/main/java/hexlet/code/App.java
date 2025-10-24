@@ -51,15 +51,15 @@ public class App {
                 Cli.selectname();
                 Engine.prime();
             }
-            case 0 -> {
-                return;
-            }
-            default ->
-                    log.log(Level.WARNING,
-                            "'yes' is wrong answer ;(. Correct answer was 'no'.\nLet's try again, {0}",
-                            Cli.name);
+            case 0 -> log.info("Exiting the game. Goodbye!");
+            default -> log.log(
+                    Level.WARNING,
+                    "'yes' is wrong answer ;(. Correct answer was 'no'.\nLet's try again, {0}",
+                    Cli.name
+            );
         }
     }
 }
+
 
 
