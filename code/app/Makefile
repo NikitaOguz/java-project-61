@@ -1,35 +1,43 @@
 .DEFAULT_GOAL := build-run
 
+ifeq ($(OS),Windows_NT)
+	GRADLE = gradlew.bat
+else
+	GRADLE = ./gradlew
+endif
+
+APP_DIR = app
+
 setup:
-	gradlew.bat wrapper --gradle-version 9.1.0
+	cd $(APP_DIR) && $(GRADLE) wrapper --gradle-version 9.1.0
 
 clean:
-	gradlew.bat clean
+	cd $(APP_DIR) && $(GRADLE) clean
 
 build:
-	gradlew.bat clean build
+	cd $(APP_DIR) && $(GRADLE) clean build
 
 install:
-	gradlew.bat clean install
+	cd $(APP_DIR) && $(GRADLE) clean install
 
 run-dist:
-	build\install\app\bin\app
+	$(APP_DIR)/build/install/app/bin/app
 
 run:
-	gradlew.bat run
+	cd $(APP_DIR) && $(GRADLE) run
 
 test:
-	gradlew.bat test
+	cd $(APP_DIR) && $(GRADLE) test
 
 report:
-	gradlew.bat jacocoTestReport
+	cd $(APP_DIR) && $(GRADLE) jacocoTestReport
 
 lint:
-	gradlew.bat spotlessApply
+	cd $(APP_DIR) && $(GRADLE) spotlessApply
 
 update-deps:
-	gradlew.bat refreshVersions
-	# gradlew.bat dependencyUpdates -Drevision=release
+	cd $(APP_DIR) && $(GRADLE) refreshVersions
+	# cd $(APP_DIR) && $(GRADLE) dependencyUpdates -Drevision=release
 
 build-run: build run
 
