@@ -1,7 +1,7 @@
 package hexlet.code;
 import java.util.logging.Logger;
 public final class Cli {
-    Logger logger = Logger.getLogger(getClass().Cli.class.getName());
+    private static final Logger logger = Logger.getLogger(Cli.class.getName());
     private Cli() {
         throw new UnsupportedOperationException("Utility class");
     }
