@@ -5,8 +5,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5a2a257b-cb07-47fd-a630-624c0725f638" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/app/code/app/.github/workflows/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/app/code/app/.github/workflows/hexlet-check.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/app/code/app/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/app/code/app/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/app/code/app/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/app/code/app/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/app/code/app/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/app/code/app/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/app/code/app/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/app/code/app/build.gradle.kts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/app/code/app/config/checkstyle/checkstyle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/app/code/app/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/app/code/app/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/app/code/app/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/app/code/app/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/app/code/app/settings.gradle.kts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/app/code/app/src/main/java/hexlet/code/App.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/app/code/app/src/main/java/hexlet/code/Cli.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/app/code/app/src/main/java/hexlet/code/Input.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/app/code/app/src/main/java/hexlet/code/Rand.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/app/code/app/src/main/java/hexlet/code/games/Engine.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,6 +41,9 @@
     <system id="GRADLE">
       <state>
         <task path="$PROJECT_DIR$/app">
+          <activation />
+        </task>
+        <task path="$PROJECT_DIR$">
           <activation />
         </task>
         <projects_view>
@@ -46,19 +68,12 @@
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="app" type="f1a62948:ProjectNode" />
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
-                <item name="build setup" type="c8890929:TasksNode$1" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="app" type="f1a62948:ProjectNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
                 <item name="distribution" type="c8890929:TasksNode$1" />
               </path>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="app" type="f1a62948:ProjectNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-                <item name="other" type="c8890929:TasksNode$1" />
+                <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
               </path>
             </expand>
             <select />
