@@ -6,39 +6,38 @@ else
 	GRADLE = ./gradlew
 endif
 
-APP_DIR = app
-
 setup:
-	cd $(APP_DIR) && $(GRADLE) wrapper --gradle-version 9.1.0
+	$(GRADLE) wrapper --gradle-version 9.1.0
 
 clean:
-	cd $(APP_DIR) && $(GRADLE) clean
+	$(GRADLE) clean
 
 build:
-	cd $(APP_DIR) && $(GRADLE) clean build
+	$(GRADLE) clean build
 
 install:
-	cd $(APP_DIR) && $(GRADLE) clean install
+	$(GRADLE) clean install
 
 run-dist:
-	$(APP_DIR)/build/install/app/bin/app
+	@cmd /c build\install\app\bin\app.bat
 
 run:
-	cd $(APP_DIR) && $(GRADLE) run
+	$(GRADLE) run
 
 test:
-	cd $(APP_DIR) && $(GRADLE) test
+	$(GRADLE) test
 
 report:
-	cd $(APP_DIR) && $(GRADLE) jacocoTestReport
+	$(GRADLE) jacocoTestReport
 
 lint:
-	cd $(APP_DIR) && $(GRADLE) spotlessApply
+	$(GRADLE) spotlessApply
 
 update-deps:
-	cd $(APP_DIR) && $(GRADLE) refreshVersions
-	# cd $(APP_DIR) && $(GRADLE) dependencyUpdates -Drevision=release
+	$(GRADLE) refreshVersions
 
 build-run: build run
 
 .PHONY: build
+
+

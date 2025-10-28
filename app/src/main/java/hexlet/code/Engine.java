@@ -1,0 +1,28 @@
+package hexlet.code;
+import java.util.Scanner;
+
+public class Engine {
+    public static void enginegame(String description, String[][] rounds) {
+        Scanner scanner = Input.scanner;
+
+        Cli.selectname();
+
+        System.out.println(description);
+
+        for (String[] round : rounds) {
+            System.out.println("Question: " + round[0]);
+            System.out.print("Your answer: ");
+            String userAnswer = scanner.next();
+
+            if (userAnswer.equals(round[1])) {
+                System.out.println("Correct!");
+            } else {
+                System.out.println("'" + userAnswer + "' is wrong answer ;(. Correct answer was '" + round[1] + "'.");
+                System.out.println("Let's try again, " + Cli.name + "!");
+                return;
+            }
+        }
+
+        System.out.println("Congratulations, " + Cli.name + "!");
+    }
+}
