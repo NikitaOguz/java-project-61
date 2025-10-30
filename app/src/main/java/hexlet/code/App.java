@@ -2,6 +2,8 @@ package hexlet.code;
 
 import hexlet.code.games.*;
 
+import java.util.Scanner;
+
 
 public class App {
 
@@ -16,7 +18,9 @@ public class App {
         6 - Prime
         0 - Exit""");
 
-        String choice = Input.scanner.next();
+        Scanner scanner = new Scanner(System.in);
+        String choice = scanner.next();
+        System.out.println("Your choice: " + choice);
 
         switch (choice) {
             case "1" -> Cli.selectname();
@@ -26,9 +30,7 @@ public class App {
             case "5" -> Progression.progression();
             case "6" -> Prime.prime();
             case "0" -> System.out.println("Goodbye!");
+            default -> System.out.println("Incorrect input, enter a number between 1 and 6");
         }
     }
-}
-
-
-
+} 

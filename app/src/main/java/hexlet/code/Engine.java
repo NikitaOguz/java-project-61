@@ -3,10 +3,13 @@ import java.util.Scanner;
 
 public class Engine {
     public static void enginegame(String description, String[][] rounds) {
-        Scanner scanner = Input.scanner;
 
-        Cli.selectname();
+        Scanner scanner = new Scanner(System.in);
 
+        System.out.println("Welcome to the Brain Games!");
+        System.out.print("May I have your name? ");
+        String userName = scanner.next();
+        System.out.println("Hello, " + userName + "!");
         System.out.println(description);
 
         for (String[] round : rounds) {
@@ -18,11 +21,11 @@ public class Engine {
                 System.out.println("Correct!");
             } else {
                 System.out.println("'" + userAnswer + "' is wrong answer ;(. Correct answer was '" + round[1] + "'.");
-                System.out.println("Let's try again, " + Cli.name + "!");
+                System.out.println("Let's try again, " + userName + "!");
                 return;
             }
         }
 
-        System.out.println("Congratulations, " + Cli.name + "!");
+        System.out.println("Congratulations, " + userName + "!");
     }
 }
