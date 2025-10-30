@@ -7,8 +7,6 @@ public final class Cli {
         throw new UnsupportedOperationException("Utility class");
     }
 
-    public static String name;
-
     public static void selectname() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Welcome to the Brain Games!");

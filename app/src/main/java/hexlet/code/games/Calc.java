@@ -23,28 +23,20 @@ public class Calc {
     }
 
     private static int GetCalc(int a, int b, int operation) {
-        switch (operation) {
-            case 0:
-                return a + b;
-            case 1:
-                return a - b;
-            case 2:
-                return a * b;
-            default:
-                return 0;
-        }
+        return switch (operation) {
+            case 0 -> a + b;
+            case 1 -> a - b;
+            case 2 -> a * b;
+            default -> 0;
+        };
     }
 
     private static String getGcd(int operation) {
-        switch (operation) {
-            case 0:
-                return "+";
-            case 1:
-                return "-";
-            case 2:
-                return "*";
-            default:
-                return "?";
-        }
+        return switch (operation) {
+            case 0 -> "+";
+            case 1 -> "-";
+            case 2 -> "*";
+            default -> "?";
+        };
     }
 }
