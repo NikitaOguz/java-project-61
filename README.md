@@ -5,6 +5,8 @@ After completing all the steps in the project, automatic tests will become avail
 The hexlet-check.yml file is responsible for running these tests - do not delete this file, edit it, or rename the repository.
 
 [![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=TvoyaKurva666_java-project-61&metric=sqale_rating)](https://sonarcloud.io/summary/new_code?id=TvoyaKurva666_java-project-61)
+[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=TvoyaKurva666_java-project-61&metric=bugs)](https://sonarcloud.io/summary/new_code?id=TvoyaKurva666_java-project-61)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=TvoyaKurva666_java-project-61&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=TvoyaKurva666_java-project-61)
 
 How to launch a project:
 ## Start
