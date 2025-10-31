@@ -38,4 +38,8 @@ public class Progression {
         }
         return progression;
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> aef2f6f (Changing permission of gradlew)
