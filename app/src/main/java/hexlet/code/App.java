@@ -30,7 +30,7 @@ public class App {
             case "5" -> Progression.progression();
             case "6" -> Prime.prime();
             case "0" -> System.out.println("Goodbye!");
-            default -> System.out.println("Incorrect input, enter a number between 1 and 6");
+            default -> throw new Error("Unknown state!");
         }
     }
 } 
