@@ -31,6 +31,7 @@ public class Progression {
 
         Engine.enginegame(DESC, rounds);
     }
+
     public static int[] createProgression(int start, int step, int length) {
         int[] progression = new int[length];
         for (int i = 0; i < length; i++) {
@@ -38,8 +39,4 @@ public class Progression {
         }
         return progression;
     }
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> aef2f6f (Changing permission of gradlew)
