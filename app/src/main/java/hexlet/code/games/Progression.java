@@ -5,19 +5,24 @@ import hexlet.code.Rand;
 
 public class Progression {
     private static final String DESC = "What number is missing in the progression?";
+    private static final int ROUNDS_COUNT = 3;
+    private static final int MAX_START = 11;
+    private static final int MAX_STEP = 5;
+    private static final int PROGRESSION_LENGTH = 10;
 
     public static void progression() {
-        String[][] rounds = new String[3][2];
+        String[][] rounds = new String[ROUNDS_COUNT][2];
 
         for (int i = 0; i < rounds.length; i++) {
-            int start = Rand.random.nextInt(11);
-            int step = Rand.random.nextInt(5) + 1;
-            int length = 10;
-            int hiddenIndex = Rand.random.nextInt(length);
-            int[] progression = createProgression(start, step, length);
+            int start = Rand.RANDOM.nextInt(MAX_START);
+            int step = Rand.RANDOM.nextInt(MAX_STEP) + 1;
+            int hiddenIndex = Rand.RANDOM.nextInt(PROGRESSION_LENGTH);
+
+            int[] progression = createProgression(start, step, PROGRESSION_LENGTH);
             String correctAnswer = String.valueOf(progression[hiddenIndex]);
+
             StringBuilder question = new StringBuilder();
-            for (int j = 0; j < length; j++) {
+            for (int j = 0; j < PROGRESSION_LENGTH; j++) {
                 if (j == hiddenIndex) {
                     question.append(".. ");
                 } else {
