@@ -14,25 +14,28 @@ public class Progression {
             int step = Rand.random.nextInt(5) + 1;
             int length = 10;
             int hiddenIndex = Rand.random.nextInt(length);
-            String question = createprogression(start, step, length, hiddenIndex);
-            String correctAnswer = String.valueOf(start + hiddenIndex * step);
-            rounds[i][0] = question;
+            int[] progression = createProgression(start, step, length);
+            String correctAnswer = String.valueOf(progression[hiddenIndex]);
+            StringBuilder question = new StringBuilder();
+            for (int j = 0; j < length; j++) {
+                if (j == hiddenIndex) {
+                    question.append(".. ");
+                } else {
+                    question.append(progression[j]).append(" ");
+                }
+            }
+
+            rounds[i][0] = question.toString().trim();
             rounds[i][1] = correctAnswer;
         }
+
         Engine.enginegame(DESC, rounds);
     }
-
-    public static String createprogression(int start, int step, int length, int hiddenIndex) {
-        StringBuilder result = new StringBuilder();
-        for (int j = 0; j < length; j++) {
-            if (j == hiddenIndex) {
-                result.append(".. ");
-            } else {
-                result.append(start + j * step).append(" ");
-            }
+    public static int[] createProgression(int start, int step, int length) {
+        int[] progression = new int[length];
+        for (int i = 0; i < length; i++) {
+            progression[i] = start + i * step;
         }
-
-        return result.toString().trim();
+        return progression;
     }
-
 }
