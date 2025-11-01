@@ -10,6 +10,7 @@ public class Calc {
     private static final int OPERATIONS_COUNT = 3;
 
     public static void calc() {
+
         String[][] rounds = new String[ROUNDS_COUNT][2];
 
         for (int i = 0; i < rounds.length; i++) {

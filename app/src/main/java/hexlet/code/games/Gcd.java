@@ -21,6 +21,7 @@ public class Gcd {
 
         Engine.enginegame(DESC, rounds);
     }
+
     private static int creategcd(int n1, int n2) {
         while (n2 != 0) {
             int temp = n2;

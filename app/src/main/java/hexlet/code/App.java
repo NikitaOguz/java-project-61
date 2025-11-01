@@ -6,6 +6,7 @@ import hexlet.code.games.Gcd;
 import hexlet.code.games.Prime;
 import hexlet.code.games.Progression;
 import java.util.Scanner;
+
 public class App {
 
     public static void main(String[] args) {
@@ -34,4 +35,5 @@ public class App {
             default -> throw new Error("Unknown state!");
         }
     }
-} 
+}
+
