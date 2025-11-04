@@ -18,10 +18,10 @@ public class Progression {
             int step = Rand.RANDOM.nextInt(MAX_STEP) + 1;
             int hiddenIndex = Rand.RANDOM.nextInt(PROGRESSION_LENGTH);
 
-            int[] progression = createProgression(start, step, PROGRESSION_LENGTH);
-            String correctAnswer = String.valueOf(progression[hiddenIndex]);
-
-            StringBuilder question = new StringBuilder();
+            String[] progression = createProgression(first, step,PROGRESSION_LENGTH);
+            String answer = progression[hiddenIndex];
+            progression[hiddenIndex] = "..";
+            String question = String.join(" ", progression);
             for (int j = 0; j < PROGRESSION_LENGTH; j++) {
                 if (j == hiddenIndex) {
                     question.append(".. ");
