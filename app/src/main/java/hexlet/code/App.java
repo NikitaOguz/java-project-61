@@ -32,7 +32,7 @@ public class App {
             case "5" -> Progression.progression();
             case "6" -> Prime.prime();
             case "0" -> System.out.println("Goodbye!");
-            default -> throw new Error("Unknown state!");
+            default -> throw new RuntimeException("Unknown user choice" + userChoice);
         }
     }
 }
