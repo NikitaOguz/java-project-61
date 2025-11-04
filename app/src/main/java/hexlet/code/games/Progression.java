@@ -18,20 +18,23 @@ public class Progression {
             int step = Rand.RANDOM.nextInt(MAX_STEP) + 1;
             int hiddenIndex = Rand.RANDOM.nextInt(PROGRESSION_LENGTH);
 
-            String[] progression = createProgression(first, step,PROGRESSION_LENGTH);
-            String answer = progression[hiddenIndex];
-            progression[hiddenIndex] = "..";
-            String question = String.join(" ", progression);
+            int[] progression = createProgression(start, step, PROGRESSION_LENGTH);
+            int correctAnswer = progression[hiddenIndex];
+            progression[hiddenIndex] = -1;
+
+            StringBuilder questionBuilder = new StringBuilder();
             for (int j = 0; j < PROGRESSION_LENGTH; j++) {
                 if (j == hiddenIndex) {
-                    question.append(".. ");
+                    questionBuilder.append(".. ");
                 } else {
-                    question.append(progression[j]).append(" ");
+                    questionBuilder.append(progression[j]).append(" ");
                 }
             }
 
-            rounds[i][0] = question.toString().trim();
-            rounds[i][1] = correctAnswer;
+            String question = questionBuilder.toString().trim();
+
+            rounds[i][0] = question;
+            rounds[i][1] = String.valueOf(correctAnswer);
         }
 
         Engine.enginegame(DESC, rounds);
@@ -45,3 +48,4 @@ public class Progression {
         return progression;
     }
 }
+
