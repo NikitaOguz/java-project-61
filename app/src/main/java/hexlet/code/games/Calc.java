@@ -18,11 +18,11 @@ public class Calc {
             int operationIndex = Rand.RANDOM.nextInt(OPERATIONS.length);
 
             String operator = OPERATIONS[operationIndex];
-            String question = first + " " + operator + " ";
-            int result = getCalc(first, second, operator);
+            String question = first + " " + operator + " " + second;
+            String correctAnswer = String.valueOf(getCalc(first, second, operator));
 
-            rounds[i][0] = question + second;
-            rounds[i][1] = String.valueOf(result);
+            rounds[i][0] = question;
+            rounds[i][1] = correctAnswer;
         }
 
         Engine.enginegame(DESC, rounds);
@@ -37,3 +37,4 @@ public class Calc {
         };
     }
 }
+
