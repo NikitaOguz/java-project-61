@@ -1,5 +1,5 @@
 ### Hexlet tests and linter status:
-[![Actions Status](https://github.com/AnrDaemon/java-project-61/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/AnrDaemon/java-project-61/actions)
+[![Actions Status](https://github.com/NikitaOguz/java-project-61/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/NikitaOguz/java-project-61/actions)
 
 [![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=TvoyaKurva666_java-project-61&metric=sqale_rating)](https://sonarcloud.io/summary/new_code?id=TvoyaKurva666_java-project-61)
 [![Bugs](https://sonarcloud.io/api/project_badges/measure?project=TvoyaKurva666_java-project-61&metric=bugs)](https://sonarcloud.io/summary/new_code?id=TvoyaKurva666_java-project-61)
