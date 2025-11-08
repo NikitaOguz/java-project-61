@@ -9,11 +9,7 @@ public class Calc {
     private static final String[] OPERATIONS = {"+", "-", "*"};
 
     public static void calc() {
-<<<<<<< HEAD
         String[][] rounds = new String[Engine.ROUNDS][2];
-=======
-        String[][] rounds = new String[ROUNDS_COUNT][2];
->>>>>>> 79ad30ec3a04ecce271eaf7f2669d01eaf16e283
 
         for (int i = 0; i < rounds.length; i++) {
             int first = Rand.RANDOM.nextInt(MAX_RANDOM);
