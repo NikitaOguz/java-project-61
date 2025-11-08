@@ -5,11 +5,10 @@ import hexlet.code.Rand;
 
 public class Prime {
     private static final String DESC = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
-    private static final int ROUNDS_COUNT = 3;
     private static final int MAX_RANDOM_NUMBER = 101;
 
     public static void prime() {
-        String[][] rounds = new String[ROUNDS_COUNT][2];
+        String[][] rounds = new String[Engine.ROUNDS][2];
 
         for (int i = 0; i < rounds.length; i++) {
             int number = Rand.RANDOM.nextInt(MAX_RANDOM_NUMBER);

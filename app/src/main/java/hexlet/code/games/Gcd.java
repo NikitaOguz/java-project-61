@@ -4,11 +4,10 @@ import hexlet.code.Rand;
 
 public class Gcd {
     private static final String DESC = "Find the greatest common divisor of given numbers.";
-    private static final int ROUNDS_COUNT = 3;
     private static final int MAX_RANDOM = 100;
 
     public static void gcd() {
-        String[][] rounds = new String[ROUNDS_COUNT][2];
+        String[][] rounds = new String[Engine.ROUNDS][2];
         for (int i = 0; i < rounds.length; i++) {
             int num1 = Rand.RANDOM.nextInt(MAX_RANDOM);
             int num2 = Rand.RANDOM.nextInt(MAX_RANDOM);
